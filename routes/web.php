@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminRoutesController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\AddUserController;
+use App\Http\Controllers\logistics\RequestsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,6 +37,7 @@ Route::prefix('admin')->middleware('auth','isAdmin')->group(function(){
 //Logistics Routes
 Route::prefix('logistics')->middleware('auth','isLogistics')->group(function(){
     Route::view('dashboard', 'livewire.logistics.dashboard')->name('logistics');
+    Route::get('procurement/requests',[RequestsController::class, 'index'])->name('requests');
 });
 
 //Finance Routes
