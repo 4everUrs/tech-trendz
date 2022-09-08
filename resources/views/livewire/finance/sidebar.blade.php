@@ -1,7 +1,7 @@
 <nav class="sidebar sidebar-offcanvas" id="sidebar">
     <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
-        <a class="sidebar-brand brand-logo" href="#"><img src="{{asset('collection/images/logo.png')}}" alt="logo" /></a>
-        <a class="sidebar-brand brand-logo-mini" href="#"><img src="{{asset('collection/images/logo-mini.png')}}"
+        <a class="sidebar-brand brand-logo" href="#"><img src="{{asset('assets/images/logo.png')}}" alt="logo" /></a>
+        <a class="sidebar-brand brand-logo-mini" href="#"><img src="{{asset('assets/images/logo-mini.png')}}"
                 alt="logo" /></a>
     </div>
     <ul class="nav">
@@ -9,16 +9,13 @@
             <div class="profile-desc">
                 <div class="profile-pic">
                     <div class="count-indicator">
-                        <img class="img-xs rounded-circle " src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}>
-                    <span class=" count bg-success"></span>
+                        <img class="img-xs rounded-circle " src="{{ Auth::user()->profile_photo_url }}"
+                            alt="{{ Auth::user()->name }}">
+                        <span class="count bg-success"></span>
                     </div>
                     <div class="profile-name">
                         <h5 class="mb-0 font-weight-normal">{{ Auth::user()->name }}</h5>
-                        @if (Auth::user()->role_id == '0')
                         <span>Administrator</span>
-                        @else
-                        <span>Finance Manager</span>
-                        @endif
                     </div>
                 </div>
             </div>

@@ -75,6 +75,7 @@
             </a>
             <div class="collapse" id="applicant">
                 <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="{{route('request')}}">Requests Lists</a></li>
                     <li class="nav-item"> <a class="nav-link" href="#">................</a></li>
                 </ul>
             </div>

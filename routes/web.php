@@ -5,6 +5,7 @@ use App\Http\Controllers\AdminRoutesController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\AddUserController;
 use App\Http\Controllers\RequestListTableController;
+use Carbon\Carbon;
 
 /*
 |--------------------------------------------------------------------------
@@ -48,6 +49,7 @@ Route::prefix('finance')->middleware('auth','isFinance')->group(function(){
 //Core Routes
 Route::prefix('core')->middleware('auth','isCore')->group(function(){
     Route::view('dashboard', 'livewire.core.dashboard')->name('core');
+    Route::view('requests','livewire.core.requests')->name('request');
 });
 
 //HR Routes
