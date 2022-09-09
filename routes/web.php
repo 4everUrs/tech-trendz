@@ -5,6 +5,11 @@ use App\Http\Controllers\AdminRoutesController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\AddUserController;
 use App\Http\Controllers\RequestListTableController;
+<<<<<<< Updated upstream
+=======
+use App\Http\Controllers\RequestListController;
+use Carbon\Carbon;
+>>>>>>> Stashed changes
 
 /*
 |--------------------------------------------------------------------------
@@ -29,15 +34,15 @@ Route::get('/redirects',[LoginController::class, 'login']);
 Route::prefix('admin')->middleware('auth','isAdmin')->group(function(){
 
     Route::get('dashboard',[AdminRoutesController::class, 'index'])->name('dashboard');
-    Route::get('adduser',[AddUserController::class, 'index'])->name('adduser');
-    Route::post('adduser',[AddUserController::class, 'store'])->name('adduser');
-
+    Route::resource('adduser', AddUserController::class);
 });
 
 //Logistics Routes
 Route::prefix('logistics')->middleware('auth','isLogistics')->group(function(){
     Route::view('dashboard', 'livewire.logistics.dashboard')->name('logistics');
-    Route::get('procurement/requests',[RequestListTableController::class, 'index'])->name('requests');
+    Route::resource('requests_lists',RequestListController::class);
+    
+   
 });
 
 //Finance Routes

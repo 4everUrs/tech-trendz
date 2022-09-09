@@ -16,7 +16,7 @@
         <ul class="navbar-nav navbar-nav-right">
             @if (Auth::user()->role_id == '0')
                 <li class="nav-item dropdown d-none d-lg-block">
-                    <a class="nav-link btn btn-success create-new-button" href="{{route('adduser')}}">+ Add Account</a>
+                    <a class="nav-link btn btn-success create-new-button" href="{{route('adduser.index')}}">+ Add Account</a>
                 </li>      
             @endif
            

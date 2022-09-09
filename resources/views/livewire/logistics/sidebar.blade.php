@@ -60,7 +60,7 @@
                 </a>
                 <div class="collapse" id="procurement">
                     <ul class="nav flex-column sub-menu">
-                        <li class="nav-item"> <a class="nav-link" href="{{route ('requests')}}">Request Lists</a></li>
+                        <li class="nav-item"> <a class="nav-link" href="{{route('requests_lists.index')}}">Request Lists</a></li>
                         <li class="nav-item"> <a class="nav-link" href="#">Suppliers Lists</a></li>
                         <li class="nav-item"> <a class="nav-link" href="#">Purchase Order</a></li>
                         <li class="nav-item"> <a class="nav-link" href="#">Procured Item Lists</a></li>
@@ -81,7 +81,26 @@
                 </a>
                 <div class="collapse" id="warehouse">
                     <ul class="nav flex-column sub-menu">
-                        <li class="nav-item"> <a class="nav-link" href="#">Request Lists</a></li>
+                        
+                        <li class="nav-item menu-items">
+                            <a class="nav-link" data-bs-toggle="collapse" href="#test" aria-expanded="false" aria-controls="test">
+                                <span class="menu-icon">
+                                    <i class="mdi mdi-package-variant"></i>
+                                </span>
+                                <span class="menu-title">Procurement</span>
+                                <i class="menu-arrow"></i>
+                            </a>
+                            <div class="collapse" id="test">
+                                <ul class="nav flex-column sub-menu">
+                                    <li class="nav-item"> <a class="nav-link" href="#">Request Lists</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Suppliers Lists</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Purchase Order</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Procured Item Lists</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Reports</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Send Request</a></li>
+                                </ul>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </li>
