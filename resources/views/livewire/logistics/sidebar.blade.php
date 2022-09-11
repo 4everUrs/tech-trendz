@@ -60,7 +60,7 @@
                 </a>
                 <div class="collapse" id="procurement">
                     <ul class="nav flex-column sub-menu">
-                        <li class="nav-item"> <a class="nav-link" href="{{route('requests_lists.index')}}">Request Lists</a></li>
+                        <li class="nav-item"> <a class="nav-link" href="#">Request Lists</a></li>
                         <li class="nav-item"> <a class="nav-link" href="#">Suppliers Lists</a></li>
                         <li class="nav-item"> <a class="nav-link" href="#">Purchase Order</a></li>
                         <li class="nav-item"> <a class="nav-link" href="#">Procured Item Lists</a></li>

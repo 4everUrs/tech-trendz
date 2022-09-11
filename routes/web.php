@@ -4,12 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminRoutesController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\AddUserController;
-use App\Http\Controllers\RequestListTableController;
-<<<<<<< Updated upstream
-=======
-use App\Http\Controllers\RequestListController;
-use Carbon\Carbon;
->>>>>>> Stashed changes
+
 
 /*
 |--------------------------------------------------------------------------
@@ -40,7 +35,7 @@ Route::prefix('admin')->middleware('auth','isAdmin')->group(function(){
 //Logistics Routes
 Route::prefix('logistics')->middleware('auth','isLogistics')->group(function(){
     Route::view('dashboard', 'livewire.logistics.dashboard')->name('logistics');
-    Route::resource('requests_lists',RequestListController::class);
+    
     
    
 });
