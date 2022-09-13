@@ -57,7 +57,7 @@
             </a>
             <div class="collapse" id="budget">
                 <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"> <a class="nav-link" href="#">...............</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="{{ route('request') }}">Requests</a></li>
                 </ul>
             </div>
         </li>
@@ -109,14 +109,14 @@
         </li>
         <div class="dropdown-divider"></div>
         <li class="nav-item menu-items">
-            <a class="nav-link" data-bs-toggle="collapse" href="#ap/ar" aria-expanded="false" aria-controls="ap/ar">
+            <a class="nav-link" data-bs-toggle="collapse" href="#apar" aria-expanded="false" aria-controls="apar">
                 <span class="menu-icon">
                     <i class="mdi mdi-package-variant"></i>
                 </span>
                 <span class="menu-title">AP / AR</span>
                 <i class="menu-arrow"></i>
             </a>
-            <div class="collapse" id="ap/ar">
+            <div class="collapse" id="apar">
                 <ul class="nav flex-column sub-menu">
                     <li class="nav-item"> <a class="nav-link" href="#">................</a></li>
                 </ul>

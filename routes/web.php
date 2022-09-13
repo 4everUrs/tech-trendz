@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminRoutesController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\AddUserController;
+use App\Http\Livewire\Finance\Bm\BmRequest;
+use App\Http\Livewire\Finance\Bm\Transactions;
 
 
 /*
@@ -43,6 +45,8 @@ Route::prefix('logistics')->middleware('auth','isLogistics')->group(function(){
 //Finance Routes
 Route::prefix('finance')->middleware('auth','isFinance')->group(function(){
     Route::view('dashboard', 'livewire.finance.dashboard')->name('finance');
+    Route::get('budget/transaction',Transactions::class)->name('transaction');
+    Route::get('budget/request',BmRequest::class)->name('request');
 });
 
 //Core Routes
@@ -53,6 +57,7 @@ Route::prefix('core')->middleware('auth','isCore')->group(function(){
 //HR Routes
 Route::prefix('hr')->middleware('auth','isHr')->group(function(){
     Route::view('dashboard', 'livewire.hr.dashboard')->name('hr');
+    Route::resource('test',BudgetRequest::class);
 });
 
 
